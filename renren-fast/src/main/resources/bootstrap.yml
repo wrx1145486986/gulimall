@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: renren-fast
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 119.3.229.159:8848
+      server-addr: 119.3.229.159:8848

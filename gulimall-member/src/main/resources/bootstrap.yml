@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    nacos:
+      server-addr: 119.3.229.159:8848
+  application:
+    name: gulimall-member

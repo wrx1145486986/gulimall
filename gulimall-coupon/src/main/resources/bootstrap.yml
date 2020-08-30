@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: gulimall-coupon
+  cloud:
+    nacos:
+      server-addr: 119.3.229.159:8848
+      config:
+        server-addr: 119.3.229.159:8848
+        # 切换命名空间
+        namespace: 7167cf10-9e8a-487c-b2fd-22051e218b3b
+        extension-configs:
+          - data-id: other.yml
+            group: dev
+            refresh: true

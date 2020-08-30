@@ -1,0 +1,33 @@
+package ${package}import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.io.Serializable;
+import java.util.List;
+
+.${moduleName}.entity;
+#if(${hasBigDecimal})
+#end
+#if(${hasList})
+#end
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+@Data
+@Document(collection = "${tableName}")
+public class ${className}Entity implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    #foreach ($column in $columns)
+        #if($column.columnName == "id")
+        @Id
+        #end
+    private #if($column.extra == "array")List<#end$column.attrType#if($column.extra == "array")>#end $column.attrname;
+    #end
+
+}
